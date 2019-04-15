@@ -10,6 +10,8 @@ class Cart < ApplicationRecord
       budget: self.budget,
       active: self.active,
       total: self.total,
+      timestamp: self.updated_at,
+      margin: self.budget - self.total,
       clothing_items: self.clothing_items.collect(&:clothing_item_json)
     }
   end

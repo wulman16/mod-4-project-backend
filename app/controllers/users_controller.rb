@@ -26,7 +26,6 @@ class UsersController < ApplicationController
   end
 
   def find_user
-    # @user = User.find(params[:id])
     @user = User.where(name: params[:id])
   end
 
