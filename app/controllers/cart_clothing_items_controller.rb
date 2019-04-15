@@ -1,6 +1,11 @@
 class CartClothingItemsController < ApplicationController
   before_action :find_cart_clothing_item, only: [:show, :destroy]
 
+  def index
+    @cart_clothing_items = CartClothingItem.all
+    render json: @cart_clothing_items
+  end
+
   def show
     render json: @cart_clothing_item, status: :ok
   end

@@ -1,8 +1,13 @@
 class CartsController < ApplicationController
   before_action :find_cart, only: [:show, :update, :destroy]
 
+  def index
+    @carts = Cart.all
+    render json: @carts.cart_json, status: :ok
+  end
+
   def show
-    render json: @cart, status: :ok
+    render json: @cart.cart_json, status: :ok
   end
 
   def create

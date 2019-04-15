@@ -22,6 +22,30 @@ shirt = ClothingItem.create(name: 'Shirt',
   color: 'blue',
   material: 'cotton')
 
+pants = ClothingItem.create(name: 'Pants',
+  image: 'https://cdn.shopify.com/s/files/1/1205/5216/products/P-GRYAC2.jpg?v=1543433326',
+  description: 'Amazing pants.',
+  price: 70,
+  category: 'pants',
+  color: 'gray',
+  material: 'cotton')
+
+shoes = ClothingItem.create(name: 'Shoes',
+  image: 'http://picture-cdn.wheretoget.it/rtp576-i.jpg',
+  description: 'Very sturdy shoes.',
+  price: 110,
+  category: 'shoes',
+  color: 'brown',
+  material: 'leather')
+
+hat = ClothingItem.create(name: 'Hat',
+  image: 'https://images-na.ssl-images-amazon.com/images/I/411FJ+-EclL._AC_UL260_SR200,260_.jpg',
+  description: 'Very sturdy shoes.',
+  price: 13,
+  category: 'hat',
+  color: 'brown',
+  material: 'leather')
+
 cart1 = Cart.create(user_id: brian.id,
   budget: 1000,
   active: true)
@@ -30,5 +54,14 @@ cart2 = Cart.create(user_id: will.id,
   budget: 500,
   active: false)
 
-cart_shirt = CartClothingItem.create(cart_id: cart1.id,
+cart1_shirt = CartClothingItem.create(cart_id: cart1.id,
   clothing_item_id: shirt.id)
+
+cart1_pants = CartClothingItem.create(cart_id: cart1.id,
+  clothing_item_id: pants.id)
+
+cart1_hat = CartClothingItem.create(cart_id: cart1.id,
+  clothing_item_id: hat.id)
+
+cart2_shoes = CartClothingItem.create(cart_id: cart2.id,
+  clothing_item_id: shoes.id)

@@ -7,7 +7,7 @@ class ClothingItemsController < ApplicationController
   end
 
   def show
-    render json: @clothing_item, status: :ok
+    render json: @clothing_item.clothing_item_json, status: :ok
   end
 
   private
