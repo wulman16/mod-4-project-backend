@@ -21,7 +21,7 @@ class CartsController < ApplicationController
 
   def update
     if @cart.update(cart_params)
-      render json: @cart, status: :accepted
+      render json: @cart.cart_json, status: :accepted
     else
       render json: { errors: @cart.errors.full_messages }, status: :unprocessible_entity
     end
