@@ -18,7 +18,7 @@ shirt = ClothingItem.create(name: 'Shirt',
   image: 'https://static3.cilory.com/273124-thickbox_default/nologo-navy-casual-shirt.jpg',
   description: 'A cool shirt!',
   price: 50,
-  category: 'shirt',
+  category: 'shirts',
   color: 'blue',
   material: 'cotton')
 
@@ -42,7 +42,7 @@ hat = ClothingItem.create(name: 'Hat',
   image: 'https://images-na.ssl-images-amazon.com/images/I/411FJ+-EclL._AC_UL260_SR200,260_.jpg',
   description: 'Very sturdy shoes.',
   price: 13,
-  category: 'hat',
+  category: 'hats',
   color: 'brown',
   material: 'leather')
 
